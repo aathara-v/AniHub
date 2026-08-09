@@ -1,0 +1,6 @@
+{
+  "name": "Ani Hub",
+  "description": "Anime streaming and hub platform with Jikan API metadata, video player, search, genres, watchlist, and custom user account authentication via Firestore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

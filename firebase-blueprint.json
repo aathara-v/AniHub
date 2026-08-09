@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User accounts with custom username and password stored in Firestore",
+      "properties": {
+        "username": { "type": "string", "description": "Unique username" },
+        "password": { "type": "string", "description": "Password string or hash" },
+        "displayName": { "type": "string", "description": "Display name" },
+        "avatarUrl": { "type": "string", "description": "Avatar URL" },
+        "createdAt": { "type": "string", "description": "ISO creation date" }
+      },
+      "required": ["username", "password"]
+    },
+    "watchlists": {
+      "title": "Watchlists",
+      "description": "User watchlists and saved anime",
+      "properties": {
+        "username": { "type": "string", "description": "Owner username" },
+        "animeId": { "type": "number", "description": "Jikan Anime ID" },
+        "title": { "type": "string", "description": "Anime title" },
+        "image": { "type": "string", "description": "Poster image URL" },
+        "status": { "type": "string", "description": "watching, plan_to_watch, completed, dropped" },
+        "score": { "type": "number", "description": "User rating 1-10" },
+        "updatedAt": { "type": "string", "description": "ISO updated timestamp" }
+      },
+      "required": ["username", "animeId"]
+    },
+    "history": {
+      "title": "Watch History",
+      "description": "User video watching progress and history",
+      "properties": {
+        "username": { "type": "string", "description": "Owner username" },
+        "animeId": { "type": "number", "description": "Jikan Anime ID" },
+        "animeTitle": { "type": "string", "description": "Anime title" },
+        "animeImage": { "type": "string", "description": "Poster image URL" },
+        "episodeNumber": { "type": "number", "description": "Episode number" },
+        "episodeTitle": { "type": "string", "description": "Episode title" },
+        "timestamp": { "type": "number", "description": "Playback position in seconds" },
+        "duration": { "type": "number", "description": "Total duration in seconds" },
+        "lastWatchedAt": { "type": "string", "description": "ISO date string" }
+      },
+      "required": ["username", "animeId", "episodeNumber"]
+    }
+  }
+}
